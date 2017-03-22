@@ -1,69 +1,24 @@
-<!DOCTYPE html>
 <html>
 <head>
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-	<!-- Optional theme -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-	<style type="text/css">
-	
-		#palette {
-			height: 400px;
-			width: 100%;
-		}
-
-		#media{
-			height: 200px;
-			width: 100%;
-		}
-
-		#blocklyDiv {
-			height: 600px;
-		}
-
-		.comp-header {
-			height: 30px;
-			vertical-align: middle;
-		    background: rgba(102, 153, 0, 0.3);
-		    border: 1px solid;
-		    padding: 4px;
-		    margin-bottom: 4px;
-
-		}
-
-		.comp-container {
-			border: 1px solid;
-			margin-bottom: 2px;
-		}
-	</style>
-	<script type="text/javascript" src='blockly/blockly_compressed.js'></script>
+        <title>Tistory OAuth 2.0 Sample - Example Implicit Grant </TITLE>
 </head>
 <body>
-	<!--  -->
-	<div class='container-fluid'>
-		<div class='row'>
-			<div class='col-sm-3'>
-			<div id='palette'>
-				<div class='comp-header comp-container'>Blocks</div>
-				<div class='comp-container'>Palette Blocks</div>
-			</div>
-			<div id='media' >
-				<div class='comp-header comp-container'>Media</div>
-				<div class=' comp-container'>Media List</div>
-			</div>
-		</div>
-		<div class='col-sm-9' id='blocklyContainer'>
-			<div class='comp-header comp-container'>Viewer</div>
-			<div  class='comp-container' id='blocklyDiv'></div>
-		</div>
-		</div>
-	</div>
-	<script type="text/javascript">
-		var workspace = Blockly.inject('blocklyDiv');
-	</script>
+    <script>
+            if (window.location.hash) {
+            alert(window.location.hash.substring(1));
+        }
+    </script>
+    <form method="get" action="https://www.tistory.com/oauth/authorize/">
+        <input type="hidden" name="client_id" value="5b3a3102e801c4f2b3ac3f47e0d1fa47"/>
+	<input type="hidden" name="redirect_uri" value="http://blog.lkaybob.pe.kr"/>
+        <input type="hidden" name="response_type" value="token"/>
+            <button type="submit">get access_token!</button>
+    <form>
 </body>
 </html>
+
+<!-- clientid=5b3a3102e801c4f2b3ac3f47e0d1fa47
+secretkey=5b3a3102e801c4f2b3ac3f47e0d1fa47799de74336bd695ece605e192ffd3b252451cbd0 -->
+<!-- https://www.tistory.com/oauth/authorize?client_id=5b3a3102e801c4f2b3ac3f47e0d1fa47&redirect_uri=http://client.redirect.url&response_type=token -->
+
+<!-- accessToken = 7eda0fcc0c6f6aa3febc47da76a45e2e_f1fd19c217323bbd9149737d6d620541 -->
